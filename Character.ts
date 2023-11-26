@@ -12,10 +12,30 @@ class Character {
     this.name = name;
   }
 }
+let character: Character = new Character("Sansa stark", 100, 50, 20, 30);
+
 let keyboard = prompt();
 
+let options: number = 0;
 
+while (options !== 9) {
+  console.log("================= Character   =================");
+  console.log("| 1.train attack                              |");
+  console.log("| 2.train defense                             |");
+  console.log("| 3.Print attributes                          |");
+  console.log("| 9.Exit                                      |");
+  console.log("===============================================");
 
-let sansa: Character = new Character("Sansa stark", 100, 50, 20, 30);
-sansa.name = "Sansa stark";
-console.log("====>", sansa);
+  options = +keyboard("Choose a option:  ");
+
+  switch (options) {
+    case 1:
+      character.attack += 2;
+      break;
+    case 3:
+      console.log("Character ==> ", character);
+      break;
+    default:
+      console.log("Invalid option");
+  }
+}
