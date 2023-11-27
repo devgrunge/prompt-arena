@@ -39,10 +39,7 @@ while (options !== 9) {
       character.status();
       break;
     case 4:
-      character.energy -= Math.random() * 100;
-      if (character.energy <= 0) {
-        console.log("Oops, you're dead");
-      }
+      character.enterInCombat();
       character.status();
       break;
     case 8:

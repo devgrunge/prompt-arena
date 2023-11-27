@@ -10,7 +10,14 @@ export default class Character {
   status(): void {
     console.log("Name: ", this.name);
     console.log("Energy: ", this.energy.toFixed(0));
-    console.log("Energy: ", this.attack.toFixed(0));
-    console.log("Energy: ", this.defense.toFixed(0));
+    console.log("Attack: ", this.attack.toFixed(0));
+    console.log("defense: ", this.defense.toFixed(0));
+  }
+
+  enterInCombat(): void {
+    this.energy -= Math.random() * 100;
+    if (this.energy <= 0) {
+      console.log("Oops, you're dead");
+    }
   }
 }
