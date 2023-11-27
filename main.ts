@@ -23,20 +23,12 @@ while (options !== 9) {
     case 1:
       character.attack += Math.random() * 7;
       character.energy -= Math.random() * 10;
-      console.log("Name: ", character.name);
-      console.log("Energy: ", character.energy.toFixed(0));
-      console.log("Energy: ", character.attack.toFixed(0));
-      console.log("Energy: ", character.defense.toFixed(0));
-
+      character.status();
       break;
     case 2:
       character.defense += Math.random() * 5;
       character.energy -= Math.random() * 10;
-      console.log("Name: ", character.name);
-      console.log("Energy: ", character.energy.toFixed(0));
-      console.log("Energy: ", character.attack.toFixed(0));
-      console.log("Energy: ", character.defense.toFixed(0));
-
+      character.status();
       break;
     case 3:
       character.energy += Math.random() * 10;
@@ -44,29 +36,18 @@ while (options !== 9) {
         character.energy = 100;
       }
       console.log("Name: ", character.name);
-      console.log("Energy: ", character.energy.toFixed(0));
-      console.log("Energy: ", character.attack.toFixed(0));
-      console.log("Energy: ", character.defense.toFixed(0));
-
+      character.status();
       break;
     case 4:
       character.energy -= Math.random() * 100;
       if (character.energy <= 0) {
         console.log("Oops, you're dead");
       }
-      console.log("Name: ", character.name);
-      console.log("Energy: ", character.energy.toFixed(0));
-      console.log("Energy: ", character.attack.toFixed(0));
-      console.log("Energy: ", character.defense.toFixed(0));
-
+      character.status();
       break;
     case 8:
       console.log("     Character:     ");
-      console.log("Name: ", character.name);
-      console.log("Energy: ", character.energy.toFixed(0));
-      console.log("Energy: ", character.attack.toFixed(0));
-      console.log("Energy: ", character.defense.toFixed(0));
-
+      character.status();
       break;
     default:
       console.log("Leaving game");
