@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a project based on OOP paradigm, where you can train and fight with GOT("Game of thrones")
+This is a project based on OOP paradigm, where you can train and fight with GOT("Game of thrones") characters
 
 ## Getting Started
 
