@@ -7,7 +7,7 @@ let keyboard = prompt();
 
 let options: number = 0;
 
-while (options !== 9) {
+while (options !== 9 || !character.isDead()) {
   console.log("================= Character   =================");
   console.log("| 1.Train attack                              |");
   console.log("| 2.Train defense                             |");
@@ -21,21 +21,15 @@ while (options !== 9) {
 
   switch (options) {
     case 1:
-      character.attack += Math.random() * 7;
-      character.energy -= Math.random() * 10;
+      character.trainAttack();
       character.status();
       break;
     case 2:
-      character.defense += Math.random() * 5;
-      character.energy -= Math.random() * 10;
+      character.trainDefense();
       character.status();
       break;
     case 3:
-      character.energy += Math.random() * 10;
-      if (character.energy > 100) {
-        character.energy = 100;
-      }
-      console.log("Name: ", character.name);
+      character.rest();
       character.status();
       break;
     case 4:
