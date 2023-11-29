@@ -7,7 +7,7 @@ let keyboard = prompt();
 
 let options: number = 0;
 
-while (options !== 9 || !character.isDead()) {
+while (options !== 9 || character.isDead()) {
   console.log("================= Character   =================");
   console.log("| 1.Train attack                              |");
   console.log("| 2.Train defense                             |");
@@ -33,7 +33,8 @@ while (options !== 9 || !character.isDead()) {
       character.status();
       break;
     case 4:
-      character.enterInCombat();
+      let damage: number = character.enterInCombat();
+      console.log(`You lost ${damage.toFixed(0)} hitpoints`);
       character.status();
       break;
     case 8:

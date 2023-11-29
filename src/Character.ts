@@ -15,7 +15,8 @@ export default class Character {
   }
 
   enterInCombat(): number {
-    this.energy -= Math.random() * 100;
+    let exhaustion = Math.random() * 100;
+    this.energy -= exhaustion;
     this.isDead();
     return this.energy;
   }
