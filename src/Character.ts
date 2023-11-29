@@ -7,11 +7,18 @@ export default class Character {
     public defense: number
   ) {}
 
-  status(): void {
-    console.log("Name: ", this.name);
-    console.log("Energy: ", this.energy.toFixed(0));
-    console.log("Attack: ", this.attack.toFixed(0));
-    console.log("defense: ", this.defense.toFixed(0));
+  status(): string {
+    return (
+      "Character  \n" +
+      "Name: " +
+      this.name +
+      "\nEnergy:  " +
+      this.energy.toFixed(0) +
+      "\nAtack:   " +
+      this.attack.toFixed(0) +
+      "\nDefense: " +
+      this.defense.toFixed(0)
+    );
   }
 
   enterInCombat(): number {
@@ -33,8 +40,8 @@ export default class Character {
     this.isDead();
   }
 
-  rest(): void {
-    this.energy += Math.random() * 10;
+  rest(hours: number): void {
+    this.energy += hours * (Math.random() * 10);
     if (this.energy > 100) {
       this.energy = 100;
     }
@@ -42,11 +49,6 @@ export default class Character {
   }
 
   isDead(): boolean {
-    if (this.energy <= 0) {
-      console.log("Oops, you're dead");
-      return true;
-    } else {
-      return false;
-    }
+    return this.energy <= 0 ? false : true;
   }
 }

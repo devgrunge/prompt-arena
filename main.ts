@@ -22,26 +22,28 @@ while (options !== 9 || character.isDead()) {
   switch (options) {
     case 1:
       character.trainAttack();
-      character.status();
+      console.log(character.status());
       break;
     case 2:
       character.trainDefense();
-      character.status();
+      console.log(character.status());
       break;
     case 3:
-      character.rest();
-      character.status();
+      let hours = +keyboard('How many hours will you rest?', )
+      character.rest(hours);
+      console.log(character.status());
       break;
     case 4:
       let damage: number = character.enterInCombat();
       console.log(`You lost ${damage.toFixed(0)} hitpoints`);
-      character.status();
+      console.log(character.status());
       break;
     case 8:
       console.log("     Character:     ");
-      character.status();
+      console.log(character.status());
       break;
     default:
       console.log("Leaving game");
   }
 }
+console.log("Oops, you're dead");
