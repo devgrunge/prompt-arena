@@ -6,7 +6,7 @@ export class Character {
   protected _maxLife: number;
   protected _life: number;
   constructor(name: string) {
-    this._name = this.name;
+    this._name = name;
     this._armor = Utils.randomize(1);
     this._maxLife = Utils.randomize(90);
     this._life = Utils.randomize(90);
