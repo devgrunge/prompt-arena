@@ -1,7 +1,7 @@
 import prompt from "prompt-sync";
-import Character from "./src/Character";
+import { Character } from "./src/Character";
 
-let character: Character = new Character("Sansa stark", 100, 50, 20, 30);
+let character: Character = new Character("Sansa stark");
 
 let keyboard = prompt();
 
@@ -21,15 +21,15 @@ while (options !== 9 || character.isDead()) {
 
   switch (options) {
     case 1:
-      character.trainAttack();
+      // character.trainAttack();
       console.log(character.status());
       break;
     case 2:
-      character.trainDefense();
+      // character.trainDefense();
       console.log(character.status());
       break;
     case 3:
-      let hours = +keyboard('How many hours will you rest?', )
+      let hours = +keyboard("How many hours will you rest?");
       character.rest(hours);
       console.log(character.status());
       break;
