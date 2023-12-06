@@ -10,4 +10,12 @@ export class Mage extends Character {
     this._inteligence = Utils.randomize(15);
     this._speed = Utils.randomize(10);
   }
+
+  public atack(): string {
+    return `${this._name} attacked`;
+  }
+
+  public defend(attackedBy: Character): string {
+    return `${this._name} defended the atack`;
+  }
 }

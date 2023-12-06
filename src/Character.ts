@@ -1,6 +1,6 @@
 import { Utils } from "./Utils";
 
-export class Character {
+export abstract class Character {
   protected _name: string;
   protected _armor: number;
   protected _maxLife: number;
@@ -69,4 +69,8 @@ export class Character {
   private randomizer(factor: number): number {
     return Math.random() * factor;
   }
+
+  public abstract atack(): string;
+
+  public abstract defend(attackedBy: Character): string;
 }
